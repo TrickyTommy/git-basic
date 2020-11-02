@@ -1,0 +1,24 @@
+git clone terus di beri nama
+ada git workflow programmer b 
+git basic programmer a
+a: menghapus fitur pada index.js
+commit terus push
+git checkout  -b develop origin/develop
+b: di programmer b dijadikan satu fitur
+commit
+push develop
+maka tertolak karena belum ada code baru
+caranya
+git fetch origin 
+git rebase orrigfin/develope
+kemudian bisa pilih
+terus git add
+rebase --continue
+git push origin develop -f (force)
+generate sshkey ssh-keygen -t rsa -b 4896 -C (email) enter
+diminta lokasi untuk menyimpan
+kunci di copy masuk git hub terus setting masuk ssh keys
+clone dengan ssh
+git Zsh
+cari plugins tambahkan git zsh-autosuggestions flutter docker docker-compose kubectl yarn
+
