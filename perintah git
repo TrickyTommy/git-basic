@@ -1,0 +1,117 @@
+trickytommy@trickytommy-popos:~/git-basic$ git init
+Initialized empty Git repository in /home/trickytommy/git-basic/.git/
+trickytommy@trickytommy-popos:~/git-basic$ git add README.md
+trickytommy@trickytommy-popos:~/git-basic$ git commit -m "initial commit"
+[master (root-commit) 6760ba3] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+trickytommy@trickytommy-popos:~/git-basic$ git log
+commit 6760ba3147f738d083c58744e03175674b2eeb11 (HEAD -> master)
+Author: Tommy Ferdian Hadimarta <trickytommy4@gmail.com>
+Date:   Mon Nov 2 14:28:20 2020 +0700
+
+    initial commit
+trickytommy@trickytommy-popos:~/git-basic$ git add README.md
+trickytommy@trickytommy-popos:~/git-basic$ git commit -m "add initialization section"
+[master 1f1b73f] add initialization section
+ 1 file changed, 2 insertions(+)
+trickytommy@trickytommy-popos:~/git-basic$ git status
+On branch master
+nothing to commit, working tree clean
+trickytommy@trickytommy-popos:~/git-basic$ rm -rf .git
+trickytommy@trickytommy-popos:~/git-basic$ ls
+logs
+trickytommy@trickytommy-popos:~/git-basic$ git init
+Initialized empty Git repository in /home/trickytommy/git-basic/.git/
+trickytommy@trickytommy-popos:~/git-basic$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+trickytommy@trickytommy-popos:~/git-basic$ git add -A
+trickytommy@trickytommy-popos:~/git-basic$ git commit "initial commit git ignore"
+error: pathspec 'initial commit git ignore' did not match any file(s) known to git
+trickytommy@trickytommy-popos:~/git-basic$ git commit -m "initial commit git ignore"
+[master (root-commit) 2670d42] initial commit git ignore
+ 2 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+trickytommy@trickytommy-popos:~/git-basic$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+trickytommy@trickytommy-popos:~/git-basic$ git status
+On branch master
+nothing to commit, working tree clean
+trickytommy@trickytommy-popos:~/git-basic$ git log
+commit 2670d42ee2ecefdfc7ce55eab0732701535fb340 (HEAD -> master)
+Author: Tommy Ferdian Hadimarta <trickytommy4@gmail.com>
+Date:   Mon Nov 2 14:38:01 2020 +0700
+
+    initial commit git ignore
+trickytommy@trickytommy-popos:~/git-basic$ git add -A
+trickytommy@trickytommy-popos:~/git-basic$ git commit --amend -m "inital commit"
+[master f6643f2] inital commit
+ Date: Mon Nov 2 14:38:01 2020 +0700
+ 2 files changed, 7 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+trickytommy@trickytommy-popos:~/git-basic$ git log
+commit f6643f22296858141951862b55af13fac17b9888 (HEAD -> master)
+Author: Tommy Ferdian Hadimarta <trickytommy4@gmail.com>
+Date:   Mon Nov 2 14:38:01 2020 +0700
+
+    inital commit
+trickytommy@trickytommy-popos:~/git-basic$ git remote add origin https://github.com/TrickyTommy/git-basic.git
+trickytommy@trickytommy-popos:~/git-basic$ git remote -v
+origin  https://github.com/TrickyTommy/git-basic.git (fetch)
+origin  https://github.com/TrickyTommy/git-basic.git (push)
+trickytommy@trickytommy-popos:~/git-basic$ git remote add github https://github.com/TrickyTommy/git-basic.git
+trickytommy@trickytommy-popos:~/git-basic$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 326 bytes | 163.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/TrickyTommy/git-basic.git
+ * [new branch]      master -> master
+trickytommy@trickytommy-popos:~/git-basic$ git add -Atrickytommy@trickytommy-popos:~/git-basic$ git commit -m "tambah remote"
+[master 4833ea3] tambah remote
+ 1 file changed, 4 insertions(+)
+trickytommy@trickytommy-popos:~/git-basic$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+trickytommy@trickytommy-popos:~/git-basic$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/TrickyTommy/git-basic.git
+   f6643f2..4833ea3  master -> master
+trickytommy@trickytommy-popos:~/git-basic$ git tag -a v1.0.0 -m "hello"
+trickytommy@trickytommy-popos:~/git-basic$ git tag
+v1.0.0
+trickytommy@trickytommy-popos:~/git-basic$ git tag -l 
+v1.0.0
+trickytommy@trickytommy-popos:~/git-basic$ git push origin --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 169 bytes | 169.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/TrickyTommy/git-basic.git
+ * [new tag]         v1.0.0 -> v1.0.0
+trickytommy@trickytommy-popos:~/git-basic$ ^C
+trickytommy@trickytommy-popos:~/git-basic$ 
